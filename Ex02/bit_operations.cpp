@@ -1,6 +1,7 @@
 #include <iostream>
 
 using namespace std;
+// Sean  Klein
 
 int main()
 {
@@ -26,16 +27,16 @@ int main()
 	check what bit is set on position pos
 	*/
 	{
-		unsigned char pos[] = {1, 2};
+		unsigned char pos[] = {1, 2}; //both times 0 because array-indexing starts at zero; example: val = 1 (0001) and p = 0 -> bitIs = 1
 		unsigned char vals[] = {1, 1};
-		unsigned int len = sizeof(vals)/sizeof(vals[0]);
+		unsigned int len = sizeof(vals)/sizeof(vals[0]); // 2 / 1
 		unsigned int i;
 
 		for (i=0; i < len; i++) {
 			unsigned char val = vals[i];
 			unsigned char p = pos[i];
 
-			unsigned char bitIs = val; /* Calculate here */
+			unsigned char bitIs = (val >> p) & 1; /* Calculate here */
 			cout << "Bit value at position " << ((int) p) << " for the number " << ((int) val) << ": " << ((int) bitIs) << endl;
 		}
 	}
