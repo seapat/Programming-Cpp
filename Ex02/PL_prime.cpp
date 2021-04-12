@@ -61,3 +61,14 @@ int main() {
 
 }
 
+/*
+The number 4294967295 is a prime?: 0
+Calculation took: 15.9347s
+
+Optimized version
+
+The number 4294967295 is a prime?: 0
+Calculation took: 0.006505s
+
+ */
+
