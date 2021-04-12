@@ -13,17 +13,20 @@ int main()
 
     cout << "Formula to be solved: ax^2 + bx + c = 0 " << endl;
 
-    cout << "Enter a number for a: ";
-    cin >> a;
+    while (a < 1) {
+        cout << "Enter a number for a: ";
+        cin >> a;
+        if (a == 0)
+        {
+            cout << "Invalid number: division by zero";
+        }
+    }
     cout << "Enter a number for b: ";
     cin >> b;
     cout << "Enter a number for c: ";
     cin >> c;
 
-    if (a == 0)
-    {
-        cout << "Invalid number: division by zero";
-    }
+   
     else
     {
         cout << "Your result is: " << endl;
