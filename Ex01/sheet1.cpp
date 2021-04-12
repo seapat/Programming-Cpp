@@ -117,13 +117,13 @@ static void mitternachtsFormel(int a, int b, int c) {
 	double discriminant = (b * b) - (4 * a * c);
 
 	if (discriminant <= 0) {
-		cout << "Fuer die Werte a: " << a << ", b: " << b << ", c: " << c << " gibt es kein Ergebnis!" << endl;
+		cout << "can't calculate squareroot for negative numbers!" << endl;
 		return;
 	}
 
 	cout << "Your result is: " << endl;
-	cout << "x_1 = " << ((-1 * b) + sqrt(discriminant) / (2 * a)) << endl;
-	cout << "x_2 = " << ((-1 * b) - sqrt(discriminant) / (2 * a)) << endl;
+	cout << "x_1 = " << ( ((-1 * b) + sqrt(discriminant)) / (2 * a) ) << endl;
+	cout << "x_2 = " << ( ((-1 * b) - sqrt(discriminant)) / (2 * a) ) << endl;
 
 }
 
