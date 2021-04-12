@@ -114,7 +114,7 @@ int ggT(int a, int b);
 
 static void mitternachtsFormel(int a, int b, int c) {
 
-	double discriminant = (b * b) - 4 * a * c;
+	double discriminant = (b * b) - (4 * a * c);
 
 	if (discriminant <= 0) {
 		cout << "Fuer die Werte a: " << a << ", b: " << b << ", c: " << c << " gibt es kein Ergebnis!" << endl;
@@ -176,7 +176,7 @@ int main()
 	cout << "Enter a number: " << endl;
 	cin >> someNumber;
 	cout << (someNumber / 2) << endl;
-	 */
+	*/
 
 	int input;
 
