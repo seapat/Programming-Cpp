@@ -12,7 +12,7 @@ using namespace std;
 int main() {
     /* Read in the potential prime */
     cout << "Please enter a number: ";
-    unsigned long num;
+    unsigned long long num;
     cin >> num;
 
     /* Start the time measurement */
@@ -24,7 +24,7 @@ int main() {
         isPrime = false;
     }
 
-    for (unsigned long i = 2 ; i <num; i++) {
+    for (unsigned long long i = 2 ; i <num; i++) {
         if (num % i == 0) {
             isPrime = false;
 
@@ -46,7 +46,7 @@ int main() {
         isPrime = false;
     }
 
-    for (unsigned long i = 2 ; i < sqrt(num) ; i++) {
+    for (unsigned long long i = 2 ; i < sqrt(num) ; i++) {
         if (num % i == 0) {
             isPrime = false;
             break;

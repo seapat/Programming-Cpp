@@ -109,11 +109,8 @@ i = d;			// Kein Error, aber evtl. ungewollt: Wertebereich nur von -2.147.483.64
 
 */
 
-void mitternachtsFormel(int a, int b, int c);
 
-int ggT(int a, int b);
-
-static void mitternachtsFormel(int a, int b, int c) {
+static void mitternachtsFormel(float a, float b, float c) {
 
 	double discriminant = (b * b) - (4 * a * c);
 
@@ -130,8 +127,8 @@ static void mitternachtsFormel(int a, int b, int c) {
 
 	//return result;
 	cout << "Your result is: " << endl;
-	cout << "x_1 = " << ( ((-1 * b) + sqrt(discriminant)) / (2 * a) ) << endl;
-	cout << "x_2 = " << ( ((-1 * b) - sqrt(discriminant)) / (2 * a) ) << endl;
+	cout << "x_1 = " << x1 << endl;
+	cout << "x_2 = " << x2 << endl;
 	return;
 }
 
