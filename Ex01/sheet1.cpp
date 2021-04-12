@@ -192,9 +192,9 @@ int main()
 
 	if (input == 1)
 	{
-		int a = 0;
-		int b = 0;
-		int c = 0;
+		float a = 0;
+		float b = 0;
+		float c = 0;
 
 		cout << "Formula to be solved: ax^2 + bx + c = 0 " << endl;
 
