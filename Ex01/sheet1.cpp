@@ -203,7 +203,7 @@ int main()
 				cout << "Invalid number: division by zero";
 			}
 		}
-		while (a != 0);
+		while (a == 0);
 
 		cout << "Enter a number for b: ";
 		cin >> b;
