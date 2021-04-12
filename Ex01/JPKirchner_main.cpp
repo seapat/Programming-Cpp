@@ -182,9 +182,9 @@ l = i;			// kein Risiko
 i = l + 90;		// wenn Zahl + 90 > 2.147.483.647 wird -> Überlauf
 d = f;			// kein Problem, da double viel größere Werte speichern kann
 f = s;			// kein Problem, da Short nur von –32.768 bis 32.767
-b = d;			// Wertebereich nur von -128 bis 127 (Überlauf), Wert wird als ASCII Wert interpretiert
-a = i;			// Wertebereich nur von -128 bis 127 (Überlauf), Wert wird als ASCII Wert interpretiert
-i = d;			// Wertebereich nur von -2.147.483.648 bis 2.147.483.647 (Überlauf)
+b = d;			// Kein Error, aber evtl. ungewollt: Wertebereich nur von -128 bis 127 (Überlauf), Wert wird als ASCII Wert interpretiert
+a = i;			// Kein Error, aber evtl. ungewollt: Wertebereich nur von -128 bis 127 (Überlauf), Wert wird als ASCII Wert interpretiert
+i = d;			// Kein Error, aber evtl. ungewollt: Wertebereich nur von -2.147.483.648 bis 2.147.483.647 (Überlauf)
 
 */
 
