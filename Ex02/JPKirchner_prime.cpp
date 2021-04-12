@@ -69,10 +69,10 @@ int main() {
 /*
 2.3 c)
 The number 100000004987 is a prime?: 1
-Calculation took: 800.634s
+Calculation took: 1165.57s
 
 Optimized version
 
 The number 100000004987 is a prime?: 1
-Calculation took: 1165.57s
+Calculation took: 800.634s
 */

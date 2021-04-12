@@ -9,3 +9,7 @@ Informatik Bachelor
 Michael Häglsperger
 4124733
 Informatik M.Sc.
+
+Jan-Patrick Kirchner
+5756670
+Medieninformatik M.Sc.
