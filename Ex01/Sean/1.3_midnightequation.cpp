@@ -13,7 +13,7 @@ int main()
 
     cout << "Formula to be solved: ax^2 + bx + c = 0 " << endl;
 
-    while (a < 1) {
+    while (a != 0) {
         cout << "Enter a number for a: ";
         cin >> a;
         if (a == 0)
