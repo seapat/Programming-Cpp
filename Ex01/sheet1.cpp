@@ -3,83 +3,6 @@
 
 using namespace std;
 
-void mitternachtsFormel(int a, int b, int c);
-
-int ggT(int a, int b);
-
-int main()
-{
-	/*
-	int someNumber = 4;
-	cout << "Enter a number: " << endl;
-	cin >> someNumber;
-	cout << (someNumber / 2) << endl;
-	 */
-
-	int a;
-	int b;
-	int c;
-
-	cout << "Formula to be solved: ax^2 + bx + c = 0 " << endl;
-
-	while (a != 0) {
-		cout << "Enter a number for a: ";
-		cin >> a;
-		if (a == 0)
-		{
-			cout << "Invalid number: division by zero";
-		}
-	}
-	cout << "Enter a number for b: ";
-	cin >> b;
-	cout << "Enter a number for c: ";
-	cin >> c;
-
-	mitternachtsFormel(a, b, c);
-
-	cout << "Der ggT von 65 und 25 ist: " << ggT(65, 25) << endl;
-}
-
-static void mitternachtsFormel(int a, int b, int c) {
-
-	double discriminant = (b * b) - 4 * a * c;
-
-	if (discriminant <= 0) {
-		cout << "Fuer die Werte a: " << a << ", b: " << b << ", c: " << c << " gibt es kein Ergebnis!" << endl;
-		return;
-	}
-
-	cout << "Your result is: " << endl;
-	cout << "x_1 = " << ((-1 * b) + sqrt(discriminant) / (2 * a)) << endl;
-	cout << "x_2 = " << ((-1 * b) - sqrt(discriminant) / (2 * a)) << endl;
-
-
-}
-
-static int ggT(int a, int b) {
-
-	a = abs(a);
-	b = abs(b);
-
-	if (a == b) {
-
-		return (a);
-	}
-
-	if (a > b) {
-
-		return ggT(a - b, b);
-	}
-
-	if (a < b) {
-
-		return ggT(a, b - a);
-	}
-
-}
-
-
-
 /*
 Aufgabe 1.1
 
@@ -184,6 +107,97 @@ a = i;			// Kein Error, aber evtl. ungewollt: Wertebereich nur von -128 bis 127 
 i = d;			// Kein Error, aber evtl. ungewollt: Wertebereich nur von -2.147.483.648 bis 2.147.483.647 (Überlauf)
 
 */
+
+void mitternachtsFormel(int a, int b, int c);
+
+int ggT(int a, int b);
+
+int main()
+{
+	/*
+	int someNumber = 4;
+	cout << "Enter a number: " << endl;
+	cin >> someNumber;
+	cout << (someNumber / 2) << endl;
+	 */
+
+	string input;
+
+	cout << "What do you want to do? please enter a number";
+	cout << "(1) Midnight Equation";
+	cout << "(2) ggT (greatest commondivisor) ";
+	cin >> input;
+
+	if (input == 1) 
+	{
+		int a;
+		int b;
+		int c;
+
+		cout << "Formula to be solved: ax^2 + bx + c = 0 " << endl;
+
+		while (a != 0) {
+			cout << "Enter a number for a: ";
+			cin >> a;
+			if (a == 0)
+			{
+				cout << "Invalid number: division by zero";
+			}
+		}
+		cout << "Enter a number for b: ";
+		cin >> b;
+		cout << "Enter a number for c: ";
+		cin >> c;
+		mitternachtsFormel(a, b, c);
+	}
+	else if(input == 2)
+	{
+		cout << "Der ggT von 65 und 25 ist: " << ggT(65, 25) << endl;
+	}
+	else 
+	{
+		cout << "The number was incorrect, please try again.";
+	}
+
+}
+
+static void mitternachtsFormel(int a, int b, int c) {
+
+	double discriminant = (b * b) - 4 * a * c;
+
+	if (discriminant <= 0) {
+		cout << "Fuer die Werte a: " << a << ", b: " << b << ", c: " << c << " gibt es kein Ergebnis!" << endl;
+		return;
+	}
+
+	cout << "Your result is: " << endl;
+	cout << "x_1 = " << ((-1 * b) + sqrt(discriminant) / (2 * a)) << endl;
+	cout << "x_2 = " << ((-1 * b) - sqrt(discriminant) / (2 * a)) << endl;
+
+}
+
+static int ggT(int a, int b) {
+
+	a = abs(a);
+	b = abs(b);
+
+	if (a == b) {
+
+		return (a);
+	}
+
+	if (a > b) {
+
+		return ggT(a - b, b);
+	}
+
+	if (a < b) {
+
+		return ggT(a, b - a);
+	}
+
+}
+
 
 /*
 Aufgabe 1.4
