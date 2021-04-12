@@ -53,6 +53,10 @@ int main()
 	cin >> b;
 	cout << "Enter a number for c: ";
 	cin >> c;
+
+	mitternachtsFormel(a, b, c);
+
+	cout << "Der ggT von 65 und 25 ist: " << ggT(65, 25) << endl;
 }
 
 static void mitternachtsFormel(int a, int b, int c) {
