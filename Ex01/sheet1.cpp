@@ -178,7 +178,7 @@ int main()
 	cout << (someNumber / 2) << endl;
 	 */
 
-	string input;
+	int input;
 
 	cout << "What do you want to do? please enter a number";
 	cout << "(1) Midnight Equation";
