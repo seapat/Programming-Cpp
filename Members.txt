@@ -5,3 +5,7 @@ Bioinformatics Master
 Luca Dürkop
 4228891
 Informatik Bachelor
+
+Michael Häglsperger
+4124733
+Informatik M.Sc.
