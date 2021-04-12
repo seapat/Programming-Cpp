@@ -27,19 +27,7 @@ int main() {
         (clock_::now() - start).count() << "s" << endl << endl;
 
     /*
-    Remove the block comment below
+   c) 100000004987 is a prime
     */
-    /*
-    cout << "Optimized version" << endl << endl;
-    start = clock_::now();
-
-    isPrime = false;
-
-
-
-
-    cout << "The number " << num << " is a prime?: " << isPrime << endl;
-    cout << "Calculation took: " << chrono::duration_cast<second_>
-            (clock_::now() - start).count() << "s"  << endl << endl;
-    */
+  
 }
