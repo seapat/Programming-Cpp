@@ -96,8 +96,8 @@ static void mitternachtsFormel(int a, int b, int c) {
 	}
 
 	cout << "Your result is: " << endl;
-	cout << "x_1 = " << ((-1 * b) + sqrt(b * b - 4 * a * c) / (2 * a)) << endl;
-	cout << "x_2 = " << ((-1 * b) - sqrt(b * b - 4 * a * c) / (2 * a)) << endl;
+	cout << "x_1 = " << ((-1 * b) + sqrt(discriminant) / (2 * a)) << endl;
+	cout << "x_2 = " << ((-1 * b) - sqrt(discriminant) / (2 * a)) << endl;
 
 
 }
