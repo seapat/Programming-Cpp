@@ -112,55 +112,6 @@ void mitternachtsFormel(int a, int b, int c);
 
 int ggT(int a, int b);
 
-int main()
-{
-	/*
-	int someNumber = 4;
-	cout << "Enter a number: " << endl;
-	cin >> someNumber;
-	cout << (someNumber / 2) << endl;
-	 */
-
-	string input;
-
-	cout << "What do you want to do? please enter a number";
-	cout << "(1) Midnight Equation";
-	cout << "(2) ggT (greatest commondivisor) ";
-	cin >> input;
-
-	if (input == 1) 
-	{
-		int a;
-		int b;
-		int c;
-
-		cout << "Formula to be solved: ax^2 + bx + c = 0 " << endl;
-
-		while (a != 0) {
-			cout << "Enter a number for a: ";
-			cin >> a;
-			if (a == 0)
-			{
-				cout << "Invalid number: division by zero";
-			}
-		}
-		cout << "Enter a number for b: ";
-		cin >> b;
-		cout << "Enter a number for c: ";
-		cin >> c;
-		mitternachtsFormel(a, b, c);
-	}
-	else if(input == 2)
-	{
-		cout << "Der ggT von 65 und 25 ist: " << ggT(65, 25) << endl;
-	}
-	else 
-	{
-		cout << "The number was incorrect, please try again.";
-	}
-
-}
-
 static void mitternachtsFormel(int a, int b, int c) {
 
 	double discriminant = (b * b) - 4 * a * c;
@@ -217,3 +168,52 @@ if 5==5
 return 5
 
 */
+
+int main()
+{
+	/*
+	int someNumber = 4;
+	cout << "Enter a number: " << endl;
+	cin >> someNumber;
+	cout << (someNumber / 2) << endl;
+	 */
+
+	string input;
+
+	cout << "What do you want to do? please enter a number";
+	cout << "(1) Midnight Equation";
+	cout << "(2) ggT (greatest commondivisor) ";
+	cin >> input;
+
+	if (input == 1)
+	{
+		int a;
+		int b;
+		int c;
+
+		cout << "Formula to be solved: ax^2 + bx + c = 0 " << endl;
+
+		while (a != 0) {
+			cout << "Enter a number for a: ";
+			cin >> a;
+			if (a == 0)
+			{
+				cout << "Invalid number: division by zero";
+			}
+		}
+		cout << "Enter a number for b: ";
+		cin >> b;
+		cout << "Enter a number for c: ";
+		cin >> c;
+		mitternachtsFormel(a, b, c);
+	}
+	else if (input == 2)
+	{
+		cout << "Der ggT von 65 und 25 ist: " << ggT(65, 25) << endl;
+	}
+	else
+	{
+		cout << "The number was incorrect, please try again.";
+	}
+
+}
