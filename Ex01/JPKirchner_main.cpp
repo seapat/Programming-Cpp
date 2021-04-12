@@ -117,6 +117,8 @@ Fehler	C2001	Zeilenvorschub in Konstante.
 Zeile	12
 Fehler	C2146	Syntaxfehler: Fehlendes ";" vor Bezeichner "cin"
 
+Here, i would look at the first error first since the next one is following just one line later.  Also, since theerror message says ’newline in constant’, it is likely, that both errors are related.
+
 
 Fehler 3:
 Zeile	11
@@ -134,6 +136,8 @@ Fehler	C2065	"cin": nichtdeklarierter Bezeichner
 Zeile	13
 Fehler	C2065	"cout": nichtdeklarierter Bezeichner
 
+Since  all  errors  have  the  same  error  code  and  message,  we  can  assume  that  the  order  of  foxing  does  notmatter.  Either, multiple issues can be resolved by same fix (which is the case here with using the standardlibrary) or not when identifiers have different origins.
+
 
 Fehler 4:
 Zeile	10
@@ -147,6 +151,8 @@ Fehler	C2734	"someNumber": "const"-Objekt muss initialisiert werden, wenn es nic
 
 Zeile	12
 Fehler	C2678	Binärer Operator ">>": Es konnte kein Operator gefunden werden, der einen linksseitigen Operanden vom Typ "std::istream" akzeptiert (oder keine geeignete Konvertierung möglich)
+
+This is likely caused because the compiler does not allow changing the content of a constant, which is whyerrors related to the corresponding operator are put out.
 
 
 Fehler 5:
@@ -164,6 +170,9 @@ Fehler (aktiv)	E0020	Der Bezeichner ""cin"" ist nicht definiert.
 
 Zeile	1
 Fehler	C1083	Datei (Include) kann nicht geöffnet werden: "iostream.h": No such file or directory
+
+This error occurs since the file iostream which does not has any file extension.  Thus a file named ’iostream.h’cannot be found.
+
 
 */
 
