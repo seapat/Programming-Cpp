@@ -180,9 +180,9 @@ int main()
 
 	int input;
 
-	cout << "What do you want to do? please enter a number";
-	cout << "(1) Midnight Equation";
-	cout << "(2) ggT (greatest commondivisor) ";
+	cout << "What do you want to do? please enter a number" << endl;
+	cout << "(1) Midnight Equation" << endl;
+	cout << "(2) ggT (greatest commondivisor) " << endl;
 	cin >> input;
 
 	if (input == 1)
@@ -193,14 +193,18 @@ int main()
 
 		cout << "Formula to be solved: ax^2 + bx + c = 0 " << endl;
 
-		while (a != 0) {
+		do
+		{
 			cout << "Enter a number for a: ";
 			cin >> a;
+
 			if (a == 0)
 			{
 				cout << "Invalid number: division by zero";
 			}
 		}
+		while (a != 0);
+
 		cout << "Enter a number for b: ";
 		cin >> b;
 		cout << "Enter a number for c: ";
