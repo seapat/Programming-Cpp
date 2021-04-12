@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <cstdio>
 
 using namespace std;
 
@@ -118,13 +119,20 @@ static void mitternachtsFormel(int a, int b, int c) {
 
 	if (discriminant < 0) {
 		cout << "can't calculate squareroot for negative numbers!" << endl;
-		return;
-	}
+		return ;
+	};
 
+	double x1 = (((-1 * b) + sqrt(discriminant)) / (2 * a));
+	double x2 = (((-1 * b) - sqrt(discriminant)) / (2 * a));
+	
+	//string result = "Your result is: x_1 = " << x1 << "and" << "x_2 = " << x2 << endl;
+	//string result = "Your results are: x_1 = " + to_string(x1) + " and x_2 = " + to_string(x2);
+
+	//return result;
 	cout << "Your result is: " << endl;
 	cout << "x_1 = " << ( ((-1 * b) + sqrt(discriminant)) / (2 * a) ) << endl;
 	cout << "x_2 = " << ( ((-1 * b) - sqrt(discriminant)) / (2 * a) ) << endl;
-
+	return;
 }
 
 static int ggT(int a, int b) {
@@ -219,5 +227,4 @@ int main()
 	{
 		cout << "The number was incorrect, please try again.";
 	}
-
 }
