@@ -14,7 +14,7 @@ int main()
 	cout << "Enter a number: " << endl;
 	cin >> someNumber;
 	cout << (someNumber / 2) << endl;
-
+    /*
 	int a = 0;
 	int b = 0;
 	int c = 0;
@@ -33,11 +33,31 @@ int main()
 	mitternachtsFormel(a, b, c);
 
 	cout << "Der ggT von 65 und 25 ist: "<< ggT(65, 25) << endl;
+	*/ 
 
+	int a;
+	int b;
+	int c;
+
+	cout << "Formula to be solved: ax^2 + bx + c = 0 " << endl;
+
+	while (a != 0) {
+		cout << "Enter a number for a: ";
+		cin >> a;
+		if (a == 0)
+		{
+			cout << "Invalid number: division by zero";
+		}
+	}
+	cout << "Enter a number for b: ";
+	cin >> b;
+	cout << "Enter a number for c: ";
+	cin >> c;
 }
 
 static void mitternachtsFormel(int a, int b, int c) {
 
+	/* 
 	double temp1 = (b * b) - 4 * a * c;
 	double temp2;
 	double x1;
@@ -65,6 +85,15 @@ static void mitternachtsFormel(int a, int b, int c) {
 
 		cout << "Ergebnis fuer x1: " << x1 << " und fuer x2: " << x2 << endl;
 	}
+	*/
+
+
+
+
+	cout << "Your result is: " << endl;
+	cout << "x_1 = " << ((-1 * b) + sqrt(b * b - 4 * a * c) / (2 * a)) << endl;
+	cout << "x_2 = " << ((-1 * b) - sqrt(b * b - 4 * a * c) / (2 * a)) << endl;
+
 
 }
 
