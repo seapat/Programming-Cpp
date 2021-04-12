@@ -122,10 +122,6 @@ static void mitternachtsFormel(float a, float b, float c) {
 	double x1 = (((-1 * b) + sqrt(discriminant)) / (2 * a));
 	double x2 = (((-1 * b) - sqrt(discriminant)) / (2 * a));
 	
-	//string result = "Your result is: x_1 = " << x1 << "and" << "x_2 = " << x2 << endl;
-	//string result = "Your results are: x_1 = " + to_string(x1) + " and x_2 = " + to_string(x2);
-
-	//return result;
 	cout << "Your result is: " << endl;
 	cout << "x_1 = " << x1 << endl;
 	cout << "x_2 = " << x2 << endl;
