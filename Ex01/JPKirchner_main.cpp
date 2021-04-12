@@ -62,15 +62,12 @@ int main()
 static void mitternachtsFormel(int a, int b, int c) {
 
 	/* 
-	double temp1 = (b * b) - 4 * a * c;
+	
 	double temp2;
 	double x1;
 	double x2;
 
-	if (temp1 < 0) {
-		cout << "Fuer die Werte a: " << a << ", b: " << b << ", c: " << c << " gibt es kein Ergebnis!" << endl;
-		return;
-	}
+	
 	
 		temp2 = b * (-1) + std::sqrt(temp1);
 		x1 = temp2 / (2 * a);
@@ -91,8 +88,12 @@ static void mitternachtsFormel(int a, int b, int c) {
 	}
 	*/
 
+	double discriminant = (b * b) - 4 * a * c;
 
-
+	if (discriminant <= 0) {
+		cout << "Fuer die Werte a: " << a << ", b: " << b << ", c: " << c << " gibt es kein Ergebnis!" << endl;
+		return;
+	}
 
 	cout << "Your result is: " << endl;
 	cout << "x_1 = " << ((-1 * b) + sqrt(b * b - 4 * a * c) / (2 * a)) << endl;
