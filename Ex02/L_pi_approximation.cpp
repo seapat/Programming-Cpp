@@ -34,7 +34,7 @@ int main() {
 	*/
 	{
 		double piApprox = 0; /* Save the result in this variable */
-		double epsilon = 0.00001;
+		double epsilon = 0.000001;
 		int i = 0; /* Write the amount of iterations needed in this variable */
 		/* Calculate here */
 		double serie = 0;
@@ -47,4 +47,15 @@ int main() {
 		cout << "It takes " << i << " iterations to approximate Pi to: " << piApprox << endl;
 		cout << "The difference is: " << pi - piApprox << " < " << epsilon << endl;
 	}
+
+	/*
+	c)
+	Wird Epsilon um 10^(-1) verringert erhöht sich die iterations exponentiell fallend.
+	0.0001 -> 3.14149200063007905115 (9487 Iterations) 
+	0.00001 -> 3.14158200009563115529 (89635 Iterations) (9487*9.4...)
+	0.000001 -> 3.14159100000147972764 (577489 Iterations) (89635*6.4...)
+	0.0000001 -> 3.14159190000003807341 (1267174 Iterations) (577489*2.1...)
+	...
+	Da die Genauigkeit sich erhöht geht die Differnz gegen 0 -> Es braucht immer weniger Erhöhungen als davor
+	*/
 }
