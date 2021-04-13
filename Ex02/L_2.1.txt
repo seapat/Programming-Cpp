@@ -1,0 +1,44 @@
+Algorithm: 
+
+i) Problem: "Eine Tasse Kaffee aus der Kaffemaschine lassen"
+ii)Problem analysis: 
+	Ist Kaffemaschine an? (boolean)
+	Gibt die Kaffemaschine eine Fehlermeldung? (boolean)
+	Was ist Kaffeestärke (int)
+	Was ist Tassenmenge (int)
+	Was sind Tassen (a1,...,an)
+	Kaffeemaschine fertig? (boolean)
+	Auffangbecken voll? (boolean)
+iii) linear
+	understandable (-> nicht kurz da kleine Zischenschritte zum Verständnis), transparent
+
+Solution:
+1. Frage: Ist Kaffemaschine an?
+		Wenn Nein -> Schalte sie an.
+		Sonst fahre mit 2. fort
+
+2. Frage: Gibt die Kaffemaschine eine Fehlermeldung (Zu wenig Wasser,...)?
+		Wenn Ja -> Befolge Anweisung zur Behebung -> Mache 2. erneut
+		Wenn keine Fehlermeldung mehr exestiert -> fahre mit 3. fort
+
+3. Wähle die Kaffeestärke aus (1,2,3)
+
+4. Wähle eine Tasse
+
+5. Stelle Tasse in Kaffeemaschine
+
+6. Wähle wie viele Tassen (Tassenmenge) (1,2)
+
+7. Drücke auf Kaffee-Start
+
+8. Frage: Kaffee aus Maschine rausgelassen?
+		Wenn Ja -> Nehme Tasse aus Maschine
+		Wenn Nein -> Mache 8. erneut
+
+9. Frage: Ist das Auffangbecken voll?
+		Wenn Ja -> Leere das Wasser/Kaffeerest aus
+		Sonst fahre mit 10. fort
+
+10. Schalte Kaffeemaschine aus
+
+Ende (11. Genieße den Kaffee)
