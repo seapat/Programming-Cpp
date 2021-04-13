@@ -1,6 +1,4 @@
 Algorithm: 
-linear
-understandable (-> nicht kurz da kleine Zischenschritte zum Verständnis), transparent
 
 i) Problem: "Eine Tasse Kaffee aus der Kaffemaschine lassen"
 ii)Problem analysis: 
