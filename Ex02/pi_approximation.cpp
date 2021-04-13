@@ -39,7 +39,7 @@ int main() {
 		/* Calculate here */
 		double serie = 0;
 
-		while (epsilon < (pi - piApprox )) {
+		while (epsilon < abs(pi - piApprox )) {
 			i++;
 			serie = serie + (1.0 / (double)(i * i));
 			piApprox = sqrt(serie * 6);
