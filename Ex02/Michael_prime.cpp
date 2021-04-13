@@ -65,3 +65,19 @@ int main() {
     cout << "Calculation took: " << chrono::duration_cast<second_>
             (clock_::now() - start).count() << "s"  << endl << endl;
 }
+
+/*
+ * ==================
+ * Results
+ * ==================
+ *
+ * Trivial Version:
+ *
+ * The number 100000004987 is a prime?: 1
+ * Calculation took: 485.119s
+ *
+ *
+ * Optimized version
+ * The number 100000004987 is a prime?: 1
+ * Calculation took: 0.0009679s
+ */
