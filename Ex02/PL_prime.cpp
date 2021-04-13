@@ -46,7 +46,7 @@ int main() {
         isPrime = false;
     }
 
-    for (unsigned long long i = 2 ; i < sqrt(num) + 1 ; i++) {
+    for (unsigned long long i = 2 ; i < sqrt(num + 1); i++) {
         if (num % i == 0) {
             isPrime = false;
             break;
