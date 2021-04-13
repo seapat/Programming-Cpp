@@ -1,0 +1,53 @@
+/*
+ * a) i
+ * The variable j is only visible inside the block of its declaration and therefore can not be assigned to i outside
+ * this block.
+ *
+ *
+ * a) ii
+ * This program runs as expected. The variable i is declared in the outer most block of the main() function and therefore
+ * the assignment by 3 in the inner block is still set after the end of the inner block.
+ */
+
+
+/*
+ * b) i
+ * The program runs into the if branch as 5 > 1 is already true.
+ * The value of x after the if execution is set as follows: x = 8
+ *
+ *
+ * b) ii
+ * As x is exactly 1 it will pass the first and the second if condition and will be assigned to 7.
+ * The value of x after the if execution is set as follows: x = 7
+ *
+ *
+ * b) iii
+ * x is exactly 10 and therefore not greater than 10. The Program will run into the else branch and set x to -1.
+ * The value of x after the if execution is set as follows: x = -1
+ */
+
+
+/*
+ * c) i
+ * loop 1 (8 >= 4)?: index = 6; sum = 6;
+ * loop 2 (6 >= 4)?: index = 4; sum = 10;
+ * loop 3 (4 >= 4)?: index = 2; sum = 14;
+ * loop 4 (2 >= 4)?: stop
+ * -----------
+ * sum = 14
+ *
+ *
+ * c) ii
+ * loop 1: sum = 6; value = 9; (9 < 8)?: stop
+ * ----------
+ * sum = 6
+ *
+ *
+ * c) iii
+ * loop 1 (0 < 8)?: sum = 6; value = 9; index = 2; index = 3;
+ * loop 2 (3 < 8)?: sum = 15; value = 12; index = 5; index = 6;
+ * loop 3 (6 < 8)?: sum = 27; value = 15; index = 8; index = 9;
+ * loop 4 (9 < 8)?: stop
+ * ----------
+ * sum = 27
+ */
