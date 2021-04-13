@@ -54,7 +54,7 @@ int main() {
 	da im Algorithmus ein int als Divisor verwendet wird (4 Byte) welcher anschließend zum Double konvertiert wird.
 	Durch das quadrieren überschreiten wir nach 65536 den Wertebereich von int und erhalten inf für die Pi Approximation.
 
-	Da die datentypen double (und auch float) eine festgelegt Anzahl na dezimalstellen besitzen, können Fließkommazahlnen nie exakt dargestellt werden.
+	Da die datentypen double (und auch float) eine festgelegte Anzahl an dezimalstellen besitzen, können Fließkommazahlnen nie exakt dargestellt werden.
 	Deshalb kann hier die Zahl pi nie vollständig vom Computer abgebildet weden. 
 	*/
 }
