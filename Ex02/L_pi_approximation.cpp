@@ -34,14 +34,14 @@ int main() {
 	*/
 	{
 		double piApprox = 0; /* Save the result in this variable */
-		double epsilon = 0.000001;
+		double epsilon = 0.00001;
 		int i = 0; /* Write the amount of iterations needed in this variable */
 		/* Calculate here */
 		double serie = 0;
 
 		while (epsilon < (pi - piApprox )) {
 			i++;
-			serie = serie + (1 / pow(i, 2));
+			serie = serie + (1.0 / (double)(i * i));
 			piApprox = sqrt(serie * 6);
 		}
 		cout << "It takes " << i << " iterations to approximate Pi to: " << piApprox << endl;
@@ -50,10 +50,8 @@ int main() {
 
 	/*
 	c)
-	Wird Epsilon um 10^(-1) verringert erhöht sich die iterations exponentiell fallend.
-	0.0001 -> 3.14149200063007905115 (9487 Iterations) 
-	0.00001 -> 3.14158200009563115529 (89635 Iterations) (9487*9.4...)
-	...
-	Da die Genauigkeit sich erhöht geht die Differnz gegen 0 -> Es braucht immer weniger Erhöhungen als davor
+	Es kann beobachtet werden, dass die Approximation von Pi nach 65536 Schritten unendlich wird. Das ist der Fall,
+	da im Algorithmus ein int als Divisor verwendet wird (4 Byte) welcher anschließend zum Double konvertiert wird.
+	Durch das quadrieren überschreiten wir nach 65536 den Wertebereich von int und erhalten inf für die Pi Approximation.
 	*/
 }
