@@ -26,7 +26,7 @@ int main()
 	check what bit is set on position pos
 	*/
 	{
-		unsigned char pos[] = {1, 2};
+		unsigned char pos[] = {1, 2}; // using p-1 might not be allowed, but array-index starts at 0, modifying pos[] would also be easy
 		unsigned char vals[] = {1, 1};
 		unsigned int len = sizeof(vals)/sizeof(vals[0]);
 		unsigned int i;
@@ -44,7 +44,7 @@ int main()
 	3.1.c
 	*/
 	{
-		unsigned char pos[] = {1, 2, 1, 3};
+		unsigned char pos[] = {1, 2, 1, 3}; // again, pos[] at 1 makes things unnecessarily difficult
 		unsigned char vals[] = {0, 4, 1, 7};
 		unsigned int len = sizeof(vals)/sizeof(vals[0]);
 		unsigned int i;
@@ -64,6 +64,7 @@ int main()
 			unsigned char val = vals[i];
 			unsigned char p = pos[i];
 
+			// ~ operator is not explicitly stated on the exercise sheet but is the obvious solution here
 			unsigned char setFalse = val & ~(1 << (p-1)); /* Calculate here */
 			cout << "Setting Bit " << ((int) p) << " to 0 for number " << ((int) val) << ": " << ((int) setFalse) << endl;
 		}
