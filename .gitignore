@@ -6,4 +6,5 @@
 /Programming-Cpp-VS.vcxproj.filters
 /Programming-Cpp-VS.vcxproj
 /Programming-Cpp-VS.sln
-/.vs
+/.vs/
+/.gitignore
