@@ -31,10 +31,10 @@
  * c) i
  * loop 1 (8 >= 4)?: index = 6; sum = 6;
  * loop 2 (6 >= 4)?: index = 4; sum = 10;
- * loop 3 (4 >= 4)?: index = 2; sum = 14;
+ * loop 3 (4 >= 4)?: index = 2; sum = 12;
  * loop 4 (2 >= 4)?: stop
  * -----------
- * sum = 14
+ * sum = 12
  *
  *
  * c) ii
