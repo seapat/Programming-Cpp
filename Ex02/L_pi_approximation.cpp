@@ -34,13 +34,15 @@ int main() {
 	*/
 	{
 		double piApprox = 0; /* Save the result in this variable */
-		double epsilon = 0.0001;
+		double epsilon = 0.00001;
 		int i = 0; /* Write the amount of iterations needed in this variable */
 		/* Calculate here */
-		int k = 1;
-		while (epsilon < (pi - piApprox)) {
-			piApprox = piApprox + (1 / pow(k, 2));
+		double serie = 0;
+
+		while (epsilon < (pi - piApprox )) {
 			i++;
+			serie = serie + (1 / pow(i, 2));
+			piApprox = sqrt(serie * 6);
 		}
 		cout << "It takes " << i << " iterations to approximate Pi to: " << piApprox << endl;
 		cout << "The difference is: " << pi - piApprox << " < " << epsilon << endl;
