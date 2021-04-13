@@ -15,11 +15,10 @@ int main() {
 		double piApprox = 0; /* Save the result in this variable */
 		int n = 40000;
 
-		double series = 0;
 		for (int i = 1; i <= n; i++) {
-			series += 1.0 / (i * i);
+			piApprox += 1.0 / (i * i);
 		}
-		piApprox = sqrt(series * 6);
+		piApprox = sqrt(piApprox * 6);
 
 		cout << "Pi is approximately: " << piApprox << endl;
 		cout << "The difference is: " << pi - piApprox << endl;
