@@ -40,6 +40,9 @@ int main() {
 
             i++;
         }
+        if(i==2){
+            isPrime = true;
+        }
     }
 
     //b) alle Zahlen können mit den Primzahlen < 10 dargestellt werden
