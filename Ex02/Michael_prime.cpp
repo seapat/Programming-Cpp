@@ -9,24 +9,24 @@ using namespace std;
 int main() {
     /* Read in the potential prime */
     cout << "Please enter a number: ";
-    long long num;
+    unsigned long long num;
     cin >> num;
 
     /* Start the time measurement */
     chrono::time_point<clock_> start = clock_::now();
 
     bool isPrime = false;
-    
+
     /*
     Implement the prime check here
     */
-    
+
     if(num == 2) {
         isPrime = true;
     }
-    else {
+    else if(num > 2) {
         isPrime = true;
-        for(long long i = 3; i < num; i++) {
+        for(unsigned long long i = 2; i < num; i++) {
             if(num % i == 0) {
                 cout << "found divisor: " << i << endl;
                 isPrime = false;
@@ -44,14 +44,14 @@ int main() {
 
     cout << "Optimized version" << endl << endl;
     start = clock_::now();
-    
+
     isPrime = false;
 
     if(num == 2)
         isPrime = true;
     else if(num > 2 && num % 2 != 0) {
         isPrime = true;
-        for (long long i = 3; i * i <= num; i += 2) {
+        for (unsigned long long i = 3; i * i <= num; i += 2) {
             if (num % i == 0) {
                 cout << "found divisor: " << i << endl;
                 isPrime = false;
@@ -61,7 +61,7 @@ int main() {
     }
 
 
-    cout << "The number " << num << " is a prime?: " << isPrime << endl; 
+    cout << "The number " << num << " is a prime?: " << isPrime << endl;
     cout << "Calculation took: " << chrono::duration_cast<second_>
             (clock_::now() - start).count() << "s"  << endl << endl;
 }
@@ -72,7 +72,6 @@ int main() {
  * ==================
  *
  * Trivial Version:
- *
  * The number 100000004987 is a prime?: 1
  * Calculation took: 485.119s
  *
