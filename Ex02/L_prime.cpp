@@ -48,7 +48,7 @@ int main() {
             isPrime = true;
         }
         else {
-            if (!(num % 2 == 0 || num % 3 == 0 || num % 5 == 0 || num % 7 == 0)) {
+            if (!(num % 2 == 0 || num % 3 == 0 || num % 5 == 0 || num % 7 == 0||num==1)) {
                 isPrime = true;
             }
         }
