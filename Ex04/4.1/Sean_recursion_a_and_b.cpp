@@ -1,26 +1,13 @@
 #include<stdio.h>
 
+// a)
+
 unsigned long endless(unsigned long n) {
 	printf("n = %lu\n", n);
 
 	//char memoryOnStack[1000];
 
 	return endless(n+1);
-}
-
-unsigned long recursive(unsigned long n) {
-	if (n < 10) {
-		return n;
-	}
-	return n % 10 + recursive(n / 10);
-}
-
-
-int main(void)
-{
-	unsigned long x = endless(1);	
-	printf("Recursion terminated successfully, result is: x = %lu\n", x);
-	return 0;
 }
 
 // What would happen if the depth of recursion were not constrained? Will line 11 ever be reached?
@@ -35,3 +22,24 @@ int main(void)
 
 // after commenting the line, I get n = 3993 for the time the stack overflow coccurs.Running the program multiple times leads to varying results for n which are close to but below 4000. 
 // It seems that the memory each call uses on the step can vary slightly from run to run, leading to different results.
+
+
+//b)
+
+unsigned long recursive(unsigned long n) {
+	if (n < 10) {
+		return n;
+	}
+	return n % 10 + recursive(n / 10);
+}
+
+// 
+
+
+
+int main(void)
+{
+	unsigned long x = recursive(1);
+	printf("Recursion terminated successfully, result is: x = %lu\n", x);
+	return 0;
+}
