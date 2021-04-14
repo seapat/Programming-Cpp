@@ -1,15 +1,13 @@
 #include <iostream>
 #include <array>
 
-using namespace std;
-
 int main() {
 
     // get n
     unsigned long int n = 2;
-    cout << "Enter a maximum: ";
-    cin >> n;
-    cout << endl;
+    std::cout << "Enter a maximum: ";
+    std::cin >> n;
+    std::cout << std::endl;
 
     // initialize array: all naturals are primes
     bool* primes = new bool[n + 1]{ false, false };
@@ -22,7 +20,6 @@ int main() {
     for (long int k = 2; k * k <= n; k++)
     {
         if (primes[k] == true)
-            //cout << k;
         {
             for (long int j = k * 2; j <= n; j += k)
                 primes[j] = false;
@@ -32,11 +29,11 @@ int main() {
     //build sum from indices of all primes ( == true )
     long int sum = 0;
     for (int i = 0; i < n; i++) {
-        if (primes[i] == true) {
+        if (primes[i]) {
             sum += i;
         }
     }
-    cout << "The sum of all naturals, that are prime numbers, up to n is " << sum;
+    std::cout << "The sum of all naturals, that are prime numbers, up to n is " << sum;
 
     // print values
     /*
