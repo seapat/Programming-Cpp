@@ -8,6 +8,14 @@ unsigned long endless(unsigned long n) {
 	return endless(n+1);
 }
 
+unsigned long recursive(unsigned long n) {
+	if (n < 10) {
+		return n;
+	}
+	return n % 10 + recursive(n / 10);
+}
+
+
 int main(void)
 {
 	unsigned long x = endless(1);	
