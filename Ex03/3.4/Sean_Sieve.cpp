@@ -50,4 +50,7 @@ int main() {
         }
     }
     */
+
+
+    delete[] primes;
 }
