@@ -33,7 +33,7 @@ int main() {
 
         if(length >= max_length) {
             max_length = length;
-            max_start = n;
+            max_start = i;
         }
     }
 
