@@ -5,14 +5,11 @@ using namespace std;
 
 int main() {
 
-    //unsigned int k = 2;
+    // get n
     unsigned long int n = 2;
-
-
     cout << "Enter a maximum: ";
     cin >> n;
     cout << endl;
-
 
     // initialize array: all naturals are primes
     bool* primes = new bool[n + 1]{ false, false };
@@ -32,11 +29,17 @@ int main() {
         }
     }
 
-    /*
+    //build sum from indices of all primes ( == true )
+    long int sum = 0;
     for (int i = 0; i < n; i++) {
-        cout << primes[i] << "  ";
+        if (primes[i] == true) {
+            sum += i;
+        }
     }
-    
+    cout << "The sum of all naturals, that are prime numbers, up to n is " << sum;
+
+    // print values
+    /*
     cout << endl;
     for (int i = 0; i < n; i++) {
         if (primes[i] == 1) {
@@ -47,15 +50,4 @@ int main() {
         }
     }
     */
-
-
-    //build sum from indices of all primes ( == true )
-    long int sum = 0;
-    for (int i = 0; i < n; i++) {
-        if (primes[i] == true) {
-            sum += i;
-        }
-    }
-    cout << "sum: " << sum;
-    cout << endl << "done";
 }
