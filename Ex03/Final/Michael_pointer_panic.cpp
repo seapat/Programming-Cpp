@@ -64,4 +64,8 @@ int main() {
  * funnyNumbers[2] = 202050057 -> Hex: 0xC0B0A09
  * funnyNumbers[3] = 269422093 -> Hex: 0x100F0E0D
  * funnyNumbers[4] = 336794129 -> Hex: 0x14131211
+ *
+ * Dadurch, dass an die Speicheradressen keine chars sondern wiederum ints geschrieben werden, verursacht dies (zumindest mit dem Visual Studio compiler)
+ * einen Debug Error für die letzten 3 Bytes im Array. Wegen des 4 Byte große integers schreibt das Programm in Speicheradressen außerhalb des vom Arrays
+ * belegten Speicher.  
  */
