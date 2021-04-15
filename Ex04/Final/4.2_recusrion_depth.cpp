@@ -64,6 +64,9 @@ double fixedB(int n) {
 	return 2 + fixedB(n < 0 ? n + 1 : n - 1);
 }
 
+
+// This does produce a stack overflow using Visualt Studio but does not using Clion with the Visual Studio Compiler. 
+// We assume that this is due to some settings, which we did not want to go through one by one.
 double fixedC_worker(int n1, int n2, int n, int acc) {
 	if (n <= 0)
 		return 0;
