@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Cat.h"
 #include "Dog.h"
-#include "Alligator.h."
+#include "Alligator.h"
 
 int main() {
     Cat* c1 = new Cat(2, 1.0, "green");

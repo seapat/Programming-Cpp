@@ -5,20 +5,20 @@
 unsigned long endless(unsigned long n) {
 	printf("n = %lu\n", n);
 
-	//char memoryOnStack[1000];
+	char memoryOnStack[1000];
 
 	return endless(n+1);
 }
 
-// What would happen if the depth of recursion were not constrained? Will line 11 ever be reached?
+// What would happen if the depth of recursion were not constrained? Will line 11 ever be reached?
 // Since the recursive functiob us missing an end condition, the program would run forever (or until it runs out of memory). Thus line 11 would neverbe reached.
 // Corresponding Compiler Warning: 'Sean_endless_recursion.cpp(6): warning C4717: 'endless': recursive on all control paths, function will cause runtime stack overflow'
 
 // How many times will endless() be executed?
-// The last value for n shown on the console is n = 3991, then a stack overflow exception occurs
+// The last value for n shown on the console is n = 3991, then a stack overflow exception occurs. The Stack size in Visualt studio is set to default (1MB).
 
-// char memoryOnStack [1000];
-// adding the char to the the function results in a lower amount of recursive calls: n = 596
+// adding char memoryOnStack [1000];
+// initializing the char array in each recursive call, results in a lower amount of recursive calls: n = 596. This is because the array 'pollutes' the stack and thus fills it faster.
 
 // after commenting the line, I get n = 3993 for the time the stack overflow coccurs.Running the program multiple times leads to varying results for n which are close to but below 4000. 
 // It seems that the memory each call uses on the step can vary slightly from run to run, leading to different results.
@@ -50,6 +50,8 @@ unsigned long iterative(unsigned long n) {
 
 int main(void)
 {
+	//unsigned long a = endless(1);
+
 	int n = 1989;
 
 	unsigned long x = recursive(n);
