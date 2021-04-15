@@ -73,8 +73,6 @@ double fixedC_worker(int n1, int n2, int n, int acc) {
 	else if (acc >= n)
 		return n1;
 
-	std::cout << acc << std::endl;
-
 	return fixedC_worker(n1 + n2 + n1, n1, n, acc + 1);
 }
 
