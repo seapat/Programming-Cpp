@@ -33,13 +33,29 @@ unsigned long recursive(unsigned long n) {
 	return n % 10 + recursive(n / 10);
 }
 
-// 
+// the function repeatedly divides n by 10 and sums up the remainder, terminates when no further division is possible but adds the last value for n / 10
+
+// same behaviour as recursive()
+unsigned long iterative(unsigned long n) {
+	unsigned long result = 0;
+
+	while (n > 10) {
+		result += n % 10;
+		n = n / 10;
+	}
+	return result + n ;
+}
 
 
 
 int main(void)
 {
-	unsigned long x = recursive(1);
+	int n = 1989;
+
+	unsigned long x = recursive(n);
 	printf("Recursion terminated successfully, result is: x = %lu\n", x);
+
+	unsigned long y = iterative(n);
+	printf("Recursion terminated successfully, result is: x = %lu\n", y);
 	return 0;
 }
