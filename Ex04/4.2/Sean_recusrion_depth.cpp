@@ -47,12 +47,18 @@ double fixedB(int n) {
 	return 2 + fixedB(n - 1);
 }
 
-double fixedC(int n) {
+double fixedC_worker(int n, int acc) {
+	if (n <= 0)
+		return acc;
+	return (2 * fixedC_worker(n - 1, acc)) + fixedC_worker(n - 2, acc);
+}
 
+double fixedC(int n) {
 	if ( n <= 0 )
 		return 0;
-	return (2 * fixedC(n - 1)) + fixedC(n - 2);
+	return fixedC_worker(n, 0);
 }
+
 
 
 
