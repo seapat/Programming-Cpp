@@ -9,7 +9,7 @@ double Mammal::GetHairLength() const {
 }
 
 void Mammal::SetHairLength(double _hairLength) {
-
+	this->hairLength = _hairLength;
 }
 
 Mammal::~Mammal() {
