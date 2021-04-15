@@ -1,6 +1,6 @@
 #include "Alligator.h"
 
-Alligator::Alligator(unsigned short age, unsigned short numberOfTeeth) : Reptile(age, 4) {
+Alligator::Alligator(unsigned short age, unsigned short numberOfTeeth) : Reptile(age, true) {
     this->numberOfTeeth = numberOfTeeth;
 }
 
