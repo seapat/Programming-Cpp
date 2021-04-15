@@ -2,7 +2,7 @@
 
 // a)
 
-// Problematische Zeile: 7  (Zeile 3 in der Angabe)
+// problematic line: 3 (in the exercise sheet)
 // This function is missing a proper end condition, thus it will run endlessly until causing a stack overflow.
 // An Option would be to terminate once n reaches zero (Obviously depends on what we want to achieve). 
 // Alternatively we could also check whether, we should call function A again, or just return m
@@ -18,7 +18,7 @@ double functionA(int n) {
 
 // b)
 
-// Problematische Zeile: 29 (Zeile 4 in der Angabe)
+// problematic line: 4 (in the exercise sheet)
 // n is not reduced during function calls, thus also endless and will lead to a stack overflow as well
 // As a solution we can use a ternary operator to increment or decrement the value of n until it reaches 0
 double functionB(int n) {
@@ -69,6 +69,8 @@ double fixedC_worker(int n1, int n2, int n, int acc) {
 		return 0;
 	else if (acc >= n)
 		return n1;
+
+	std::cout << acc << std::endl;
 
 	return fixedC_worker(n1 + n2 + n1, n1, n, acc + 1);
 }
