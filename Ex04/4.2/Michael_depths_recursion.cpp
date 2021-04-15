@@ -43,6 +43,15 @@ double functionB(int n) {
  *  c)
  */
 
+double functionC_worker(int n1, int n2, int n, int i) {
+    if (n <= 0)
+        return 0;
+    else if(i >= n)
+        return n1;
+
+    return functionC_worker(n1 + n2 + n1, n1, n, i+1);
+}
+
 double functionC(int n) {
     if (n == 0)
         return 0;
