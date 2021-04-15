@@ -46,7 +46,7 @@ double functionB(int n) {
 double functionC(int n) {
     if (n == 0)
         return 0;
-    return functionC(n-1) * 2 + functionC(n-2);
+    return functionC(n-1) + functionC(n-2) + functionC(n-1);
 }
 /*
  * Problematische Zeile: 49 (Zeile 4 in der Angabe)
